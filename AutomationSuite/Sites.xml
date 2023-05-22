@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="gapi">
+	<listeners>
+		<listener class-name="com.gapi.utilities.Reporting" />
+	</listeners>
+	<!--/-->
+	<listeners>
+		<listener class-name="com.gapi.testCases.AnnotationTransformer" />
+	</listeners>
+	<test name="Sites">
+		<classes>
+			<class name="com.gapi.testCases.GetSites" />
+		</classes>
+		
+	</test> <!-- Test -->
+</suite> <!-- Suite -->

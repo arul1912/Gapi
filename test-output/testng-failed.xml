@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [gapi]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="com.gapi.testCases.AnnotationTransformer"/>
+  </listeners>
+  <test thread-count="5" name="All Test Cases(failed)">
+    <classes>
+      <class name="com.gapi.testCases.GetNotificationDetails">
+        <methods>
+          <include name="updateNotificationById" invocation-numbers="0 0 1 1 2 2"/>
+          <include name="getNotificationDetailsById"/>
+          <include name="generateAuthorizationToken"/>
+          <include name="AfterSuite"/>
+          <include name="getNotificationDetailsByNegativeToken" invocation-numbers="0 0"/>
+          <include name="getAllNotificationDetailsInfo"/>
+          <include name="BeforeSuite"/>
+          <include name="updateNotificationByInvalidId" invocation-numbers="0 0"/>
+          <include name="updateAttributesOfNotification" invocation-numbers="0 0"/>
+          <include name="teardown"/>
+        </methods>
+      </class> <!-- com.gapi.testCases.GetNotificationDetails -->
+      <class name="com.gapi.testCases.CreateFAOSPRequest">
+        <methods>
+          <include name="verifyRetrievalOfOSPAccessRequestUsingID" invocation-numbers="0 0"/>
+          <include name="verifyCreateOSPAccessRequest" invocation-numbers="0 0"/>
+          <include name="verifyUploadAttachmentToOSPAccessRequest" invocation-numbers="0 0"/>
+          <include name="generateAuthorizationToken"/>
+          <include name="AfterSuite"/>
+          <include name="BeforeSuite"/>
+          <include name="teardown"/>
+        </methods>
+      </class> <!-- com.gapi.testCases.CreateFAOSPRequest -->
+      <class name="com.gapi.testCases.CancelFacilityAccessTicket">
+        <methods>
+          <include name="generateAuthorizationToken"/>
+          <include name="AfterSuite"/>
+          <include name="BeforeSuite"/>
+          <include name="verifyGetCancelledFaclityAccessTicket" invocation-numbers="0 0"/>
+          <include name="teardown"/>
+          <include name="verifyCancelFaclityAccessTicket" invocation-numbers="0 0"/>
+        </methods>
+      </class> <!-- com.gapi.testCases.CancelFacilityAccessTicket -->
+      <class name="com.gapi.testCases.EditShippingReceivingTicket">
+        <methods>
+          <include name="verifyEditReferenceNumberOfAnExistingShippingReceivingTicket" invocation-numbers="0"/>
+          <include name="verifyEditTitleOfAnExistingShippingReceivingTicket" invocation-numbers="0"/>
+          <include name="generateAuthorizationToken"/>
+          <include name="AfterSuite"/>
+          <include name="verifyEditNumberOfPackagesOfAnExistingShippingReceivingTicket" invocation-numbers="0"/>
+          <include name="BeforeSuite"/>
+          <include name="teardown"/>
+        </methods>
+      </class> <!-- com.gapi.testCases.EditShippingReceivingTicket -->
+      <class name="com.gapi.testCases.CreateVisitorAccessRequest">
+        <methods>
+          <include name="verifyVisitorAccessDeniedApprovedForMultipleLocations" invocation-numbers="0 0"/>
+          <include name="verifyVisitorAccessPendingForApprovalForSingleLocation" invocation-numbers="0 0"/>
+          <include name="CreateVisitorAccessRequestGreaterLocationStartDate" invocation-numbers="0 0"/>
+          <include name="verifyVisitorAccessApprovedForMultipleLocations" invocation-numbers="0 0"/>
+          <include name="generateAuthorizationToken"/>
+          <include name="verifyCreateVisitorAccessRequest" invocation-numbers="0 0"/>
+          <include name="BeforeSuite"/>
+          <include name="verifyVisitorAccessPendingApprovalForMultipleLocations" invocation-numbers="0 0"/>
+          <include name="verifyUploadAttachmentToVisitorAccessRequest" invocation-numbers="0 0"/>
+          <include name="verifyAttributeCreateVisitorAccessRequest" invocation-numbers="0 0 1 1"/>
+          <include name="verifyVisitorAccessDeniedForSingleLocation" invocation-numbers="0 0 1 1"/>
+          <include name="AfterSuite"/>
+          <include name="verifyVisitorAccessDeniedForMultipleLocations" invocation-numbers="0 0"/>
+          <include name="verifyVisitorAccessDeniedPendingApprovalForMultipleLocations" invocation-numbers="0 0"/>
+          <include name="bulkVisitorAccessRequestInfo" invocation-numbers="0 0"/>
+          <include name="verifyVisitorAccessApprovedForSingleLocation" invocation-numbers="0 0"/>
+          <include name="getVisitorAccessRequestByID" invocation-numbers="0 0"/>
+          <include name="verifyVisitorAccessApprovedPendingApprovalDoubleLocation" invocation-numbers="0 0"/>
+          <include name="teardown"/>
+        </methods>
+      </class> <!-- com.gapi.testCases.CreateVisitorAccessRequest -->
+      <class name="com.gapi.testCases.GetServiceTicketDetails">
+        <methods>
+          <include name="generateAuthorizationToken"/>
+          <include name="AfterSuite"/>
+          <include name="verifyGetAllWithServiceTicketFilters" invocation-numbers="10 10 12 12 27 27"/>
+          <include name="BeforeSuite"/>
+          <include name="teardown"/>
+        </methods>
+      </class> <!-- com.gapi.testCases.GetServiceTicketDetails -->
+      <class name="com.gapi.testCases.AddAttachmentsToTheRemoteHandsTicket">
+        <methods>
+          <include name="getAttachmentOfRemoteHandsTicketByID" invocation-numbers="0 0"/>
+          <include name="uploadAttachmentToTheExistingRemoteHandsTicket"/>
+          <include name="generateAuthorizationToken"/>
+          <include name="AfterSuite"/>
+          <include name="AddAttachmentstoRemoteHandsTicket" invocation-numbers="0 0 1 1"/>
+          <include name="uploadEmptyTextDocumentToTheValidRemoteHandsRequest"/>
+          <include name="BeforeSuite"/>
+          <include name="teardown"/>
+        </methods>
+      </class> <!-- com.gapi.testCases.AddAttachmentsToTheRemoteHandsTicket -->
+      <class name="com.gapi.testCases.GetCrossConnectDetails">
+        <methods>
+          <include name="verifyGetCrossConnectDetailsByInvalidLimitValue" invocation-numbers="0 0"/>
+          <include name="generateAuthorizationToken"/>
+          <include name="verifyGetCrossConnectDetailsByInvalidBearerToken" invocation-numbers="0 0"/>
+          <include name="verifyGetCrossConnectDetailsWithNegativeOffset" invocation-numbers="0 0"/>
+          <include name="BeforeSuite"/>
+          <include name="verifyCrossConnectDetailsUsingDifferentFilters" invocation-numbers="11 11"/>
+          <include name="verifyGetCrossConnectDetailsByInvalidBillingAccountNumber" invocation-numbers="0 0"/>
+          <include name="verifyGetCrossConnectDetailsByInValidId" invocation-numbers="0 0"/>
+          <include name="verifyGetCrossConnectDetailsWithNonIntergerOffset" invocation-numbers="0 0"/>
+          <include name="verifyGetCrossConnectDetailsWithNonIntegerLimitValues" invocation-numbers="0 0"/>
+          <include name="verifyGetCrossConnectDetailsWithNegativeLimitValues" invocation-numbers="0 0"/>
+          <include name="AfterSuite"/>
+          <include name="teardown"/>
+        </methods>
+      </class> <!-- com.gapi.testCases.GetCrossConnectDetails -->
+      <class name="com.gapi.testCases.GetVisitorAccessDetails">
+        <methods>
+          <include name="verifyVisitorTitleInGetAccessTicketsMultipleLocations" invocation-numbers="0 0"/>
+          <include name="generateAuthorizationToken"/>
+          <include name="AfterSuite"/>
+          <include name="GetVisitorAccessDetailsInfo" invocation-numbers="0 0"/>
+          <include name="BeforeSuite"/>
+          <include name="verifyVisitorAccessGetAccessTickerforSingleLocation" invocation-numbers="0 0"/>
+          <include name="verifyVisitorTitleInGetServiceTicketsMultipleLocations" invocation-numbers="0 0"/>
+          <include name="verifyVisitorTitleInGetServiceTicketsSingleLocation" invocation-numbers="0 0"/>
+          <include name="teardown"/>
+        </methods>
+      </class> <!-- com.gapi.testCases.GetVisitorAccessDetails -->
+      <class name="com.gapi.testCases.CreatePOPPOERequest">
+        <methods>
+          <include name="verifyUploadAttachmentToPOPPOERequest" invocation-numbers="0 0"/>
+          <include name="generateAuthorizationToken"/>
+          <include name="AfterSuite"/>
+          <include name="BeforeSuite"/>
+          <include name="verifyCreatePOPPOERequest" invocation-numbers="0 0"/>
+          <include name="teardown"/>
+        </methods>
+      </class> <!-- com.gapi.testCases.CreatePOPPOERequest -->
+      <class name="com.gapi.testCases.GetCustomerSupportTicketDetails">
+        <methods>
+          <include name="verifyGetAllWithCustomerSupportTicketFilters" invocation-numbers="22 22 26 26"/>
+          <include name="generateAuthorizationToken"/>
+          <include name="AfterSuite"/>
+          <include name="BeforeSuite"/>
+          <include name="teardown"/>
+        </methods>
+      </class> <!-- com.gapi.testCases.GetCustomerSupportTicketDetails -->
+      <class name="com.gapi.testCases.CreateNewUser">
+        <methods>
+          <include name="verifyCreateNewUser" invocation-numbers="0 0 1 1 3 3"/>
+          <include name="verifyCreateNewUserDetails" invocation-numbers="0 0"/>
+          <include name="generateAuthorizationToken"/>
+          <include name="AfterSuite"/>
+          <include name="BeforeSuite"/>
+          <include name="teardown"/>
+        </methods>
+      </class> <!-- com.gapi.testCases.CreateNewUser -->
+      <class name="com.gapi.testCases.AddAttachmentToTheCustomerSupportTicket">
+        <methods>
+          <include name="getAttachmentOfCustomerSupportTicketByID" invocation-numbers="0 0"/>
+          <include name="generateAuthorizationToken"/>
+          <include name="AfterSuite"/>
+          <include name="addAttachmentstoCustomerSupportTicket" invocation-numbers="0 0"/>
+          <include name="BeforeSuite"/>
+          <include name="teardown"/>
+          <include name="addAttachmentstoCustomerSupportTicketWithOutRequestIDAndfilename" invocation-numbers="0 0"/>
+        </methods>
+      </class> <!-- com.gapi.testCases.AddAttachmentToTheCustomerSupportTicket -->
+      <class name="com.gapi.testCases.CreateCustomerSupportTicket">
+        <methods>
+          <include name="retrieveCustomerSupportTicketAttachmentusingRequestId" invocation-numbers="0 0"/>
+          <include name="generateAuthorizationToken"/>
+          <include name="AfterSuite"/>
+          <include name="createCustomerSupportTicketAndVerifyEndToEndFlow" invocation-numbers="0 0 1 1 2 2"/>
+          <include name="BeforeSuite"/>
+          <include name="teardown"/>
+        </methods>
+      </class> <!-- com.gapi.testCases.CreateCustomerSupportTicket -->
+      <class name="com.gapi.testCases.CreateShipmentsTicket">
+        <methods>
+          <include name="AddAttachmentstoShipmentsTicket" invocation-numbers="0 0"/>
+          <include name="generateAuthorizationToken"/>
+          <include name="AfterSuite"/>
+          <include name="createShipmentsTicketAndVerifyEndToEndFlow" invocation-numbers="0 0"/>
+          <include name="postingAttachmentOfAnExistingShippingReceivingTicket" invocation-numbers="0 0"/>
+          <include name="BeforeSuite"/>
+          <include name="teardown"/>
+        </methods>
+      </class> <!-- com.gapi.testCases.CreateShipmentsTicket -->
+      <class name="com.gapi.testCases.CreateRemoteHandsTicket">
+        <methods>
+          <include name="createRemoteHandsTicketAndVerifyEndToEndFlow" invocation-numbers="0 0 1 1 2 2"/>
+          <include name="generateAuthorizationToken"/>
+          <include name="AfterSuite"/>
+          <include name="BeforeSuite"/>
+          <include name="teardown"/>
+        </methods>
+      </class> <!-- com.gapi.testCases.CreateRemoteHandsTicket -->
+      <class name="com.gapi.testCases.CreatePermanentBadgeRequest">
+        <methods>
+          <include name="verifyPermanentBadgeDeniedForSingleLocation" invocation-numbers="0 0"/>
+          <include name="verifyPermanentBadgeDeniedForMultipleLocations" invocation-numbers="0 0"/>
+          <include name="verifyPermanentBadgeAprovedAndPendingApprovalForMultipleLocations" invocation-numbers="0 0"/>
+          <include name="verifyPermanentBadgeDeniedAndPendingApprovalForMultipleLocations" invocation-numbers="0 0"/>
+          <include name="generateAuthorizationToken"/>
+          <include name="verifyAttributeCreatePermanentBadgeRequest" invocation-numbers="0 0"/>
+          <include name="verifyCreatePermanentBadgeRequestForExpiryDate" invocation-numbers="0 0"/>
+          <include name="verifyPermanentBadgeApprovedForMultipleLocations" invocation-numbers="0 0"/>
+          <include name="verifyCreatePermanentBadgeRequest" invocation-numbers="0 0"/>
+          <include name="BeforeSuite"/>
+          <include name="verifyPermanentBadgeApprovedForSingleLocation" invocation-numbers="0 0"/>
+          <include name="verifyCreatePermanentBadgeRequestTelxGroup" invocation-numbers="0 0"/>
+          <include name="verifyPermanentBadgePendingApprovalForSingleLocation" invocation-numbers="0 0"/>
+          <include name="AfterSuite"/>
+          <include name="verifyUploadAttachmentToPermanentBadgeRequest" invocation-numbers="0 0"/>
+          <include name="verifyCreatePermanentBadgeRequestGetService" invocation-numbers="0 0"/>
+          <include name="verifyCreatePermanentBadgeSubjectEnhancement" invocation-numbers="0 0"/>
+          <include name="teardown"/>
+          <include name="verifyPermanentBadgeApprovedAndDeniedForMultipleLocations" invocation-numbers="0 0"/>
+        </methods>
+      </class> <!-- com.gapi.testCases.CreatePermanentBadgeRequest -->
+      <class name="com.gapi.testCases.TerminateVisitorAccessRequest">
+        <methods>
+          <include name="generateAuthorizationToken"/>
+          <include name="AfterSuite"/>
+          <include name="BeforeSuite"/>
+          <include name="verifyAttributeTerminateVisitorAccessRequest" invocation-numbers="0 0 1 1"/>
+          <include name="verifyTerminateVisitorAccessRequest" invocation-numbers="0 0"/>
+          <include name="teardown"/>
+        </methods>
+      </class> <!-- com.gapi.testCases.TerminateVisitorAccessRequest -->
+      <class name="com.gapi.testCases.CancelShipmentsTicket">
+        <methods>
+          <include name="verifyCancelShipmentsTicketwithoutCancelReason" invocation-numbers="0 0"/>
+          <include name="verifyCancelShipmentsTicketWithCancelReason" invocation-numbers="0 0 1 1"/>
+          <include name="generateAuthorizationToken"/>
+          <include name="AfterSuite"/>
+          <include name="BeforeSuite"/>
+          <include name="teardown"/>
+        </methods>
+      </class> <!-- com.gapi.testCases.CancelShipmentsTicket -->
+      <class name="com.gapi.testCases.ModifyFAVisitorAccess">
+        <methods>
+          <include name="generateAuthorizationToken"/>
+          <include name="AfterSuite"/>
+          <include name="BeforeSuite"/>
+          <include name="verifyModifyVisitorAccessRequest" invocation-numbers="0 0"/>
+          <include name="teardown"/>
+          <include name="verifyAttributeModifyVisitorAccessRequest" invocation-numbers="0 0 1 1"/>
+        </methods>
+      </class> <!-- com.gapi.testCases.ModifyFAVisitorAccess -->
+      <class name="com.gapi.testCases.GetShipmentsTicketDetails">
+        <methods>
+          <include name="generateAuthorizationToken"/>
+          <include name="AfterSuite"/>
+          <include name="verifyGetAllWithShipmentsTicketFilters" invocation-numbers="1 1 3 3 4 4 5 5 6 6 7 7 12 12 13 13 16 16 19 19 20 20 21 21 22 22 23 23 24 24 26 26"/>
+          <include name="BeforeSuite"/>
+          <include name="retrieveShipmentTicketInfoByInvalidId" invocation-numbers="0"/>
+          <include name="teardown"/>
+        </methods>
+      </class> <!-- com.gapi.testCases.GetShipmentsTicketDetails -->
+      <class name="com.gapi.testCases.GetRemoteHandsTicketDetails">
+        <methods>
+          <include name="getAllRemoteHandsTicketsInfo"/>
+          <include name="generateAuthorizationToken"/>
+          <include name="AfterSuite"/>
+          <include name="BeforeSuite"/>
+          <include name="verifyGetAllWithFilters" invocation-numbers="0 0 1 1 3 3 4 4 5 5 9 9 10 10 11 11 15 15 16 16 20 20 21 21 35 35"/>
+          <include name="teardown"/>
+        </methods>
+      </class> <!-- com.gapi.testCases.GetRemoteHandsTicketDetails -->
+      <class name="com.gapi.testCases.ModifyFAPermanentBadge">
+        <methods>
+          <include name="verifyModifyPermanentBadgeServiceTicket" invocation-numbers="0 0"/>
+          <include name="generateAuthorizationToken"/>
+          <include name="AfterSuite"/>
+          <include name="verifyAttributeModifyPermanentBadgeRequest" invocation-numbers="0 0"/>
+          <include name="verifyModifyPermanentBadgeRequestAddSite" invocation-numbers="0 0"/>
+          <include name="BeforeSuite"/>
+          <include name="verifyModifyPermanentBadgeSubjectEnhancement" invocation-numbers="0 0"/>
+          <include name="teardown"/>
+          <include name="verifyModifyPermanentBadgeRequest" invocation-numbers="0 0"/>
+        </methods>
+      </class> <!-- com.gapi.testCases.ModifyFAPermanentBadge -->
+      <class name="com.gapi.testCases.GetReportsRequest">
+        <methods>
+          <include name="getDownloadReportByDCIMID" invocation-numbers="0"/>
+          <include name="generateAuthorizationToken"/>
+          <include name="AfterSuite"/>
+          <include name="BeforeSuite"/>
+          <include name="getReportsDetailsusingFilters" invocation-numbers="1"/>
+          <include name="teardown"/>
+        </methods>
+      </class> <!-- com.gapi.testCases.GetReportsRequest -->
+      <class name="com.gapi.testCases.TerminatePermanentBadgeRequest">
+        <methods>
+          <include name="verifyAttributeTerminatePermanentBadgeRequest" invocation-numbers="0 0 1 1"/>
+          <include name="verifyTerminatePermanentBadgeRequest" invocation-numbers="0 0"/>
+          <include name="generateAuthorizationToken"/>
+          <include name="AfterSuite"/>
+          <include name="verifyTerminatePermanentBadgeRequestGetServiceTicket" invocation-numbers="0 0"/>
+          <include name="BeforeSuite"/>
+          <include name="verifyTerminatePermanentBadgeRequestSubjectEnhancement" invocation-numbers="0 0"/>
+          <include name="teardown"/>
+        </methods>
+      </class> <!-- com.gapi.testCases.TerminatePermanentBadgeRequest -->
+    </classes>
+  </test> <!-- All Test Cases(failed) -->
+</suite> <!-- Failed suite [gapi] -->

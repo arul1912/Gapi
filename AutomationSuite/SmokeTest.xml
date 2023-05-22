@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="gapi">
+	<listeners>
+		<listener class-name="com.gapi.utilities.Reporting" />
+	</listeners>
+	<!--/-->
+	<listeners>
+		<listener class-name="com.gapi.testCases.AnnotationTransformer" />
+	</listeners>
+	<test name="Smoke test">
+		<classes>
+			<class name="com.gapi.testCases.CreateRemoteHandsTicket" />
+			<class name="com.gapi.testCases.CreateCustomerSupportTicket" />
+			<class name="com.gapi.testCases.CreateShipmentsTicket" />
+			<class name="com.gapi.testCases.CreateNewUser" />
+			<class name="com.gapi.testCases.CreateVisitorAccessRequest" />
+			<class name="com.gapi.testCases.CreatePOPPOERequest" />
+			<class name="com.gapi.testCases.CreatePermanentBadgeRequest" />
+			<class name="com.gapi.testCases.CreateFAOSPRequest" />
+			<class name="com.gapi.testCases.GetServiceTicketDetails" />
+			<class name="com.gapi.testCases.GetReportsRequest" />
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->

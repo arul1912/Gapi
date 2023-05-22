@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="gapi">
+	<listeners>
+		<listener class-name="com.gapi.utilities.Reporting" />
+	</listeners>
+	<!--/-->
+	<listeners>
+		<listener class-name="com.gapi.testCases.AnnotationTransformer" />
+	</listeners>
+	<test name="Notifications">
+		<classes>
+			<class name="com.gapi.testCases.GetAccounts" />
+			<class name="com.gapi.testCases.GetCampus" />
+			<class name="com.gapi.testCases.GetCities" />
+			<class name="com.gapi.testCases.GetCountries" />
+			<class name="com.gapi.testCases.GetLocations" />
+			<class name="com.gapi.testCases.GetMarkets" />
+			<class name="com.gapi.testCases.GetAssets" />
+			<class name="com.gapi.testCases.GetAllAssets" />
+			<class name="com.gapi.testCases.GetRegions" />
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->

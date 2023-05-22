@@ -1,0 +1,313 @@
+<html>
+<head>
+<title>TestNG:  Default test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Default test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>0/3/0</td>
+</tr><tr>
+<td>Started on:</td><td>Fri May 19 17:11:20 IST 2023</td>
+</tr>
+<tr><td>Total time:</td><td>22 seconds (22124 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.gapi.testCases.CreateRemoteHandsTicket.createRemoteHandsTicketAndVerifyEndToEndFlow()'><b>createRemoteHandsTicketAndVerifyEndToEndFlow</b><br>Test class: com.gapi.testCases.CreateRemoteHandsTicket<br>Parameters: {emailNotifications=, serviceType=, permissionId=, notes=, isExtendedVisitorBadge=, visitorType=, isBulkRequest=, contactType=, TestCaseName=Verify Remote Hands End to End flow With  Ticket with Request Type as Urgent Work and Category as Power Cycle or reboot, search_query=, serviceImpactedDescription=, yardi_id=, deleteFlag=, customerReference=REF01234, action=, details=, ExpectedStatusMessage=Created, visitorPhone=, trackingNumber=, extendedVisitorBadgeStr=, permissionGroupId=, assetId2=, billingAccountNumber=, assetId1=, assetId4=, accessEndDate=, assetId3=, report_type=, estimatedDeliveryDate=, firstName=, phone=, courier=, visitorHostFirstName=, user_id=, name=, notificationRecipients=, position=, page=, serviceImpact=, escortFirstName=, visitorBadgeStartDate=, globalUltimateKey=, lastName=, code=, role=, accountName=TelX Group, Inc., referenceTicket=WO5872547, accessStartDate=, description=, permissionGroups=, workDescription=, executionFlag=Y, title=Remote Hands Title, visitorHostCompany=, visitorBadgeEndDate=, assetId=, company=, detailedInstruction=API Test 03052021. Please locate the Cisco UCS server in rack1 and connect to the KVM. Please provide screenshots once you connect to the KVM., cancelReason=, email=, visitorFirstName=, isLoadingBayRequired=, customerExternalReference=, comments=, requestType=Urgent Work, expectedStatusCode=201, ci=, readFlag=, errorMessage=, methodName=createRemoteHandsTicketAndVerifyEndToEndFlow, TestCaseID=Verify Re, errorMessageType=, standardVisitorBadgeStr=, filters=, visitorEmail=, legalEntityKey=, visitorLastName=, PermissionGroupIDForprivileges=, site=PHX015, locations2=, escortLastName=, assetName=, locations=COLO 8 Starbucks Cage 8.06, location=, packageCount=, asset=Telx Rack 01, category=Power cycle or reboot, visitorHostLastName=}</td>
+<td><div><pre>java.lang.AssertionError: expected [200] but found [500]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+	at org.testng.Assert.assertEquals(Assert.java:122)
+	at org.testng.Assert.assertEquals(Assert.java:907)
+	at org.testng.Assert.assertEquals(Assert.java:917)
+	at com.gapi.testCases.AddCommentsToTheRemoteHandsTicket.addCommentsToTheExistingTicket(AddCommentsToTheRemoteHandsTicket.java:91)
+	at com.gapi.utilities.TestUtilities.addCommentToTheRequestAndVerify(TestUtilities.java:473)
+	at com.gapi.testCases.CreateRemoteHandsTicket.createRemoteHandsTicketAndVerifyEndToEndFlow(CreateRemoteHandsTicket.java:124)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div><a href='#' onClick='toggleBox("stack-trace2044082767", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2044082767'><pre>java.lang.AssertionError: expected [200] but found [500]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+	at org.testng.Assert.assertEquals(Assert.java:122)
+	at org.testng.Assert.assertEquals(Assert.java:907)
+	at org.testng.Assert.assertEquals(Assert.java:917)
+	at com.gapi.testCases.AddCommentsToTheRemoteHandsTicket.addCommentsToTheExistingTicket(AddCommentsToTheRemoteHandsTicket.java:91)
+	at com.gapi.utilities.TestUtilities.addCommentToTheRequestAndVerify(TestUtilities.java:473)
+	at com.gapi.testCases.CreateRemoteHandsTicket.createRemoteHandsTicketAndVerifyEndToEndFlow(CreateRemoteHandsTicket.java:124)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>5</td>
+<td>com.gapi.testCases.CreateRemoteHandsTicket@5e3f861</td></tr>
+<tr>
+<td title='com.gapi.testCases.CreateRemoteHandsTicket.createRemoteHandsTicketAndVerifyEndToEndFlow()'><b>createRemoteHandsTicketAndVerifyEndToEndFlow</b><br>Test class: com.gapi.testCases.CreateRemoteHandsTicket<br>Parameters: {emailNotifications=, serviceType=, permissionId=, notes=, isExtendedVisitorBadge=, visitorType=, isBulkRequest=, contactType=, TestCaseName=GAPI-4031-GAPI-3993-GAPI-4089-GAPI-3988-Verify Remote Hands Ticket  End to End flow with Request type and Category as Planned work and Existing cross connect or connectivity testing, search_query=, serviceImpactedDescription=, yardi_id=, deleteFlag=, customerReference=REF01234, action=, details=, ExpectedStatusMessage=Created, visitorPhone=, trackingNumber=, extendedVisitorBadgeStr=, permissionGroupId=, assetId2=, billingAccountNumber=, assetId1=, assetId4=, accessEndDate=, assetId3=, report_type=, estimatedDeliveryDate=, firstName=, phone=, courier=, visitorHostFirstName=, user_id=, name=, notificationRecipients=, position=, page=, serviceImpact=, escortFirstName=, visitorBadgeStartDate=, globalUltimateKey=, lastName=, code=, role=, accountName=TelX Group, Inc., referenceTicket=WO5872547, accessStartDate=, description=, permissionGroups=, workDescription=, executionFlag=Y, title=Remote Hands Title, visitorHostCompany=, visitorBadgeEndDate=, assetId=, company=, detailedInstruction=API Test 03052021. Please locate the Cisco UCS server in rack1 and connect to the KVM. Please provide screenshots once you connect to the KVM., cancelReason=, email=, visitorFirstName=, isLoadingBayRequired=, customerExternalReference=, comments=, requestType=Planned Work, expectedStatusCode=201, ci=, readFlag=, errorMessage=, methodName=createRemoteHandsTicketAndVerifyEndToEndFlow, TestCaseID=GAPI-4031, errorMessageType=, standardVisitorBadgeStr=, filters=, visitorEmail=, legalEntityKey=, visitorLastName=, PermissionGroupIDForprivileges=, site=PHX015, locations2=, escortLastName=, assetName=, locations=COLO 8 Starbucks Cage 8.06, location=, packageCount=, asset=Telx Rack 01, category=Existing cross connect or connectivity testing, visitorHostLastName=}</td>
+<td><div><pre>java.lang.AssertionError: expected [200] but found [500]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+	at org.testng.Assert.assertEquals(Assert.java:122)
+	at org.testng.Assert.assertEquals(Assert.java:907)
+	at org.testng.Assert.assertEquals(Assert.java:917)
+	at com.gapi.testCases.AddCommentsToTheRemoteHandsTicket.addCommentsToTheExistingTicket(AddCommentsToTheRemoteHandsTicket.java:91)
+	at com.gapi.utilities.TestUtilities.addCommentToTheRequestAndVerify(TestUtilities.java:473)
+	at com.gapi.testCases.CreateRemoteHandsTicket.createRemoteHandsTicketAndVerifyEndToEndFlow(CreateRemoteHandsTicket.java:124)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div><a href='#' onClick='toggleBox("stack-trace722044259", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace722044259'><pre>java.lang.AssertionError: expected [200] but found [500]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+	at org.testng.Assert.assertEquals(Assert.java:122)
+	at org.testng.Assert.assertEquals(Assert.java:907)
+	at org.testng.Assert.assertEquals(Assert.java:917)
+	at com.gapi.testCases.AddCommentsToTheRemoteHandsTicket.addCommentsToTheExistingTicket(AddCommentsToTheRemoteHandsTicket.java:91)
+	at com.gapi.utilities.TestUtilities.addCommentToTheRequestAndVerify(TestUtilities.java:473)
+	at com.gapi.testCases.CreateRemoteHandsTicket.createRemoteHandsTicketAndVerifyEndToEndFlow(CreateRemoteHandsTicket.java:124)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>7</td>
+<td>com.gapi.testCases.CreateRemoteHandsTicket@5e3f861</td></tr>
+<tr>
+<td title='com.gapi.testCases.CreateRemoteHandsTicket.createRemoteHandsTicketAndVerifyEndToEndFlow()'><b>createRemoteHandsTicketAndVerifyEndToEndFlow</b><br>Test class: com.gapi.testCases.CreateRemoteHandsTicket<br>Parameters: {emailNotifications=, serviceType=, permissionId=, notes=, isExtendedVisitorBadge=, visitorType=, isBulkRequest=, contactType=, TestCaseName=GAPI-4084-GAPI-3991-GAPI-4081-GAPI-3985-GAPI-4078-Verify Remote Hands Request End to End flow with Request type and Category as Planned work and Dedicated escort, search_query=, serviceImpactedDescription=, yardi_id=, deleteFlag=, customerReference=REF01234, action=, details=, ExpectedStatusMessage=Created, visitorPhone=, trackingNumber=, extendedVisitorBadgeStr=, permissionGroupId=, assetId2=, billingAccountNumber=, assetId1=, assetId4=, accessEndDate=, assetId3=, report_type=, estimatedDeliveryDate=, firstName=, phone=, courier=, visitorHostFirstName=, user_id=, name=, notificationRecipients=, position=, page=, serviceImpact=, escortFirstName=, visitorBadgeStartDate=, globalUltimateKey=, lastName=, code=, role=, accountName=TelX Group, Inc., referenceTicket=WO5872547, accessStartDate=, description=, permissionGroups=, workDescription=, executionFlag=Y, title=Remote Hands Title, visitorHostCompany=, visitorBadgeEndDate=, assetId=, company=, detailedInstruction=API Test 03052021. Please locate the Cisco UCS server in rack1 and connect to the KVM. Please provide screenshots once you connect to the KVM., cancelReason=, email=, visitorFirstName=, isLoadingBayRequired=, customerExternalReference=, comments=, requestType=Planned Work, expectedStatusCode=201, ci=, readFlag=, errorMessage=, methodName=createRemoteHandsTicketAndVerifyEndToEndFlow, TestCaseID=GAPI-4084, errorMessageType=, standardVisitorBadgeStr=, filters=, visitorEmail=, legalEntityKey=, visitorLastName=, PermissionGroupIDForprivileges=, site=PHX015, locations2=, escortLastName=, assetName=, locations=COLO 8 Starbucks Cage 8.06, location=, packageCount=, asset=Telx Rack 01, category=Dedicated escort, visitorHostLastName=}</td>
+<td><div><pre>java.lang.AssertionError: expected [200] but found [500]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+	at org.testng.Assert.assertEquals(Assert.java:122)
+	at org.testng.Assert.assertEquals(Assert.java:907)
+	at org.testng.Assert.assertEquals(Assert.java:917)
+	at com.gapi.testCases.AddCommentsToTheRemoteHandsTicket.addCommentsToTheExistingTicket(AddCommentsToTheRemoteHandsTicket.java:91)
+	at com.gapi.utilities.TestUtilities.addCommentToTheRequestAndVerify(TestUtilities.java:473)
+	at com.gapi.testCases.CreateRemoteHandsTicket.createRemoteHandsTicketAndVerifyEndToEndFlow(CreateRemoteHandsTicket.java:124)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1174000532", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1174000532'><pre>java.lang.AssertionError: expected [200] but found [500]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+	at org.testng.Assert.assertEquals(Assert.java:122)
+	at org.testng.Assert.assertEquals(Assert.java:907)
+	at org.testng.Assert.assertEquals(Assert.java:917)
+	at com.gapi.testCases.AddCommentsToTheRemoteHandsTicket.addCommentsToTheExistingTicket(AddCommentsToTheRemoteHandsTicket.java:91)
+	at com.gapi.utilities.TestUtilities.addCommentToTheRequestAndVerify(TestUtilities.java:473)
+	at com.gapi.testCases.CreateRemoteHandsTicket.createRemoteHandsTicketAndVerifyEndToEndFlow(CreateRemoteHandsTicket.java:124)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>5</td>
+<td>com.gapi.testCases.CreateRemoteHandsTicket@5e3f861</td></tr>
+</table><p>
+</body>
+</html>

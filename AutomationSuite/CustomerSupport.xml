@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="gapi">
+	<listeners>
+		<listener class-name="com.gapi.utilities.Reporting" />
+	</listeners>
+	<!--/-->
+	<listeners>
+		<listener class-name="com.gapi.testCases.AnnotationTransformer" />
+	</listeners>
+	<test name="CustomerSupport">
+		<classes>
+			<class name="com.gapi.testCases.CreateCustomerSupportTicket" />
+			<class name="com.gapi.testCases.GetCustomerSupportTicketDetails" />
+			<class name="com.gapi.testCases.EditCustomerSupportTicket" />
+			<class name="com.gapi.testCases.CancelCustomerSupportTicket" />
+			<class name="com.gapi.testCases.AddCommentToTheCustomerSupportTicket" />
+			<class name="com.gapi.testCases.AddAttachmentToTheCustomerSupportTicket" />
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->

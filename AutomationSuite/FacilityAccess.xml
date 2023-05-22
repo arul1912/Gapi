@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="gapi">
+	<listeners>
+		<listener class-name="com.gapi.utilities.Reporting" />
+	</listeners>
+	<!--/-->
+	<listeners>
+		<listener class-name="com.gapi.testCases.AnnotationTransformer" />
+	</listeners>
+	<test name="Facility Accesss">
+		<classes>
+			<class name="com.gapi.testCases.CreateVisitorAccessRequest" />
+			<class name="com.gapi.testCases.CreatePOPPOERequest" />
+			<class name="com.gapi.testCases.CreatePermanentBadgeRequest" />
+			<class name="com.gapi.testCases.CreateFAOSPRequest" />
+			<class name="com.gapi.testCases.GetOSPDetails" />
+			<class name="com.gapi.testCases.GetPermanentBadgeDetails" />
+			<class name="com.gapi.testCases.GetPOPPOEDetails" />
+			<class name="com.gapi.testCases.TerminateVisitorAccessRequest" />
+			<class name="com.gapi.testCases.TerminatePermanentBadgeRequest" />
+			<class name="com.gapi.testCases.ModifyFAVisitorAccess" />
+			<class name="com.gapi.testCases.ModifyFAPermanentBadge" />
+			<class name="com.gapi.testCases.GetVisitorAccessDetails" />
+			<class name="com.gapi.testCases.CancelFacilityAccessTicket" />
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->

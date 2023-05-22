@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="gapi">
+	<listeners>
+		<listener class-name="com.gapi.utilities.Reporting" />
+	</listeners>
+	<!--/-->
+	<listeners>
+		<listener class-name="com.gapi.testCases.AnnotationTransformer" />
+	</listeners>
+	<test name="All Test Cases">
+		<classes>
+			<class name="com.gapi.testCases.GetServiceTicketDetails" />
+			<class name="com.gapi.testCases.CreateRemoteHandsTicket" />
+			<class name="com.gapi.testCases.GetRemoteHandsTicketDetails" />
+			<class name="com.gapi.testCases.CreateCustomerSupportTicket" />
+			<class name="com.gapi.testCases.GetCustomerSupportTicketDetails" />
+			<class name="com.gapi.testCases.CreateShipmentsTicket" />
+			<class name="com.gapi.testCases.GetShipmentsTicketDetails" />
+			<class name="com.gapi.testCases.CreateNewUser" />
+			<class name="com.gapi.testCases.GetAccounts" />
+			<class name="com.gapi.testCases.GetCampus" />
+			<class name="com.gapi.testCases.GetCities" />
+			<class name="com.gapi.testCases.GetCountries" />
+			<class name="com.gapi.testCases.GetLocations" />
+			<class name="com.gapi.testCases.GetMarkets" />
+			<class name="com.gapi.testCases.GetAssets" />
+			<class name="com.gapi.testCases.GetAllAssets" />
+			<class name="com.gapi.testCases.GetRegions" />
+			<class name="com.gapi.testCases.GetSites" />
+			<class name="com.gapi.testCases.GetReportsRequest" />
+			<class name="com.gapi.testCases.GetPermissionGroupDetails" />
+			<class name="com.gapi.testCases.CreateVisitorAccessRequest" />
+			<class name="com.gapi.testCases.CreatePOPPOERequest" />
+			<class name="com.gapi.testCases.CreatePermanentBadgeRequest" />
+			<class name="com.gapi.testCases.CreateFAOSPRequest" />
+			<class name="com.gapi.testCases.GetOSPDetails" />
+			<class name="com.gapi.testCases.GetPermanentBadgeDetails" />
+			<class name="com.gapi.testCases.GetPOPPOEDetails" />
+			<class name="com.gapi.testCases.TerminateVisitorAccessRequest" />
+			<class name="com.gapi.testCases.TerminatePermanentBadgeRequest" />
+			<class name="com.gapi.testCases.ModifyFAVisitorAccess" />
+			<class name="com.gapi.testCases.ModifyFAPermanentBadge" />
+			<class name="com.gapi.testCases.GetNotificationDetails" />
+			<class name="com.gapi.testCases.GetVisitorAccessDetails" />
+			<class name="com.gapi.testCases.CancelFacilityAccessTicket" />
+			<class name="com.gapi.testCases.EditShippingReceivingTicket" />
+			<class name="com.gapi.testCases.EditCustomerSupportTicket" />
+			<class name="com.gapi.testCases.EditRemoteHandsTicket" />
+			<class name="com.gapi.testCases.CancelRemoteHandsTicket" />
+			<class name="com.gapi.testCases.CancelCustomerSupportTicket" />
+			<class name="com.gapi.testCases.UsersRBAC" />
+			<class name="com.gapi.testCases.GetRolesDetails" />
+			<class name="com.gapi.testCases.GetCrossConnectDetails" />
+			<class name="com.gapi.testCases.AddCommentsToTheRemoteHandsTicket" />
+			<class name="com.gapi.testCases.AddCommentToTheShipmentsTicket" />
+			<class name="com.gapi.testCases.AddCommentToTheCustomerSupportTicket" />
+			<class name="com.gapi.testCases.AddAttachmentsToTheRemoteHandsTicket" />
+			<class name="com.gapi.testCases.AddAttachmentToTheCustomerSupportTicket" />
+			<class name="com.gapi.testCases.AddAttachmentToTheShipmentsTicket" />
+			<class name="com.gapi.testCases.CancelShipmentsTicket" />
+			<class name="com.gapi.testCases.CreateAllFourInOne" />
+			<class name="com.gapi.testCases.GetPermissionGroupDetails" />
+			<class name="com.gapi.testCases.GetDCIMDataPointValues" />
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->

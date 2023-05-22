@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="gapi">
+	<listeners>
+		<listener class-name="com.gapi.utilities.Reporting" />
+	</listeners>
+	<!--/-->
+	<listeners>
+		<listener class-name="com.gapi.testCases.AnnotationTransformer" />
+	</listeners>
+	<test name="Notifications">
+		<classes>
+			<class name="com.gapi.testCases.CreateNewUser" />
+			<class name="com.gapi.testCases.GetPermissionGroupDetails" />
+			<class name="com.gapi.testCases.UsersRBAC" />
+			<class name="com.gapi.testCases.GetRolesDetails" />
+			<class name="com.gapi.testCases.CreateAllFourInOne" />
+			<class name="com.gapi.testCases.GetPermissionGroupDetails" />
+		</classes>
+		
+	</test> <!-- Test -->
+</suite> <!-- Suite -->
